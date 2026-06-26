@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peptide Pilot — Support</title>
+  <meta name="description" content="Support, FAQ, and troubleshooting for Peptide Pilot, the peptide tracking and reconstitution calculator app for iPhone." />
+  <style>
+    :root {
+      --bg: #0c1018;
+      --panel: #141a26;
+      --panel-2: #1b2334;
+      --text: #e8edf5;
+      --muted: #9aa7bd;
+      --accent: #5b8cff;
+      --accent-soft: rgba(91, 140, 255, 0.14);
+      --border: #243049;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+    header {
+      background: linear-gradient(160deg, #182238 0%, #0c1018 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 0 40px;
+      text-align: center;
+    }
+    .app-logo {
+      width: 104px;
+      height: 104px;
+      border-radius: 23%;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+    .app-name {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin: 0 0 8px;
+      letter-spacing: -0.5px;
+    }
+    .tagline { color: var(--muted); font-size: 1.05rem; margin: 0 auto; max-width: 560px; }
+    .version-pill {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 5px 14px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    section { padding: 40px 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+    h2 { font-size: 1.4rem; margin: 0 0 16px; letter-spacing: -0.3px; }
+    h3 { font-size: 1.02rem; margin: 0 0 6px; }
+    p { color: var(--text); }
+    .muted { color: var(--muted); }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+    }
+    .contact-grid { display: grid; gap: 14px; }
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .contact-row .label { color: var(--muted); min-width: 150px; font-weight: 600; }
+
+    details {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    details[open] { background: var(--panel-2); }
+    summary {
+      cursor: pointer;
+      padding: 16px 20px;
+      font-weight: 600;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      color: var(--accent);
+      font-size: 1.3rem;
+      font-weight: 400;
+      transition: transform 0.2s ease;
+    }
+    details[open] summary::after { content: "\2013"; }
+    .answer { padding: 0 20px 18px; color: var(--muted); }
+    .answer ol, .answer ul { margin: 8px 0; padding-left: 20px; }
+    .answer li { margin-bottom: 4px; }
+
+    ul.feature-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+    ul.feature-list li { padding-left: 24px; position: relative; color: var(--muted); }
+    ul.feature-list li::before {
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 32px 0 48px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--muted); text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <img class="app-logo" src="logo.png" alt="Peptide Pilot app icon" width="104" height="104" />
+      <h1 class="app-name">Peptide Pilot</h1>
+      <p class="tagline">A private, on-device tracker for peptide protocols — manage your vials, calculate reconstitution doses, and log your progress.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section id="about">
+      <h2>About Peptide Pilot</h2>
+      <p>Peptide Pilot helps you stay organized and accurate while managing peptide protocols. Everything is stored privately on your device — there is no account to create and no data is sent to our servers.</p>
+      <ul class="feature-list">
+        <li>Reconstitution calculator with a visual syringe guide</li>
+        <li>Vial inventory with concentration, remaining amount, and expiry tracking</li>
+        <li>Dose logbook with protocols and reminders</li>
+        <li>Weight, symptom, and progress-photo tracking</li>
+        <li>Injection-site rotation guidance</li>
+        <li>JSON backup &amp; restore and CSV data export</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Support</h2>
+      <div class="card contact-grid">
+        <div class="contact-row">
+          <span class="label">Email</span>
+          <a href="mailto:peptidepilot@gmail.com?subject=Peptide%20Pilot%20Support">peptidepilot@gmail.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="label">Best results</span>
+          <span class="muted">Include your iPhone model and iOS version so we can help faster.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>How do I add a peptide / vial?</summary>
+        <div class="answer">
+          <ol>
+            <li>Open the <strong>Vials</strong> tab.</li>
+            <li>Tap the <strong>+</strong> button in the top corner.</li>
+            <li>Enter the peptide name, total amount (mg), and the volume of bacteriostatic water you'll use to reconstitute it.</li>
+            <li>Tap <strong>Save</strong>. Peptide Pilot calculates the concentration automatically, and the vial appears in your inventory and the reconstitution calculator.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I back up my data?</summary>
+        <div class="answer">
+          <ol>
+            <li>Go to <strong>Settings &rarr; Backup &amp; Restore</strong>.</li>
+            <li>Tap <strong>Export Backup</strong>. This creates a single <code>.json</code> file containing all of your vials, protocols, doses, and logs.</li>
+            <li>Use the share sheet to save it to Files, iCloud Drive, AirDrop, or email it to yourself.</li>
+          </ol>
+          <p>We recommend exporting a backup periodically and before updating or reinstalling the app, since all data is stored locally on your device.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I restore my data from a backup?</summary>
+        <div class="answer">
+          <ol>
+            <li>Go to <strong>Settings &rarr; Backup &amp; Restore</strong>.</li>
+            <li>Tap <strong>Restore from Backup</strong> and choose a previously exported <code>.json</code> file.</li>
+            <li>Confirm. Restoring replaces the current data on the device with the contents of the backup file.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I export my data?</summary>
+        <div class="answer">
+          <p>You can export your data in two formats:</p>
+          <ul>
+            <li><strong>JSON backup</strong> — a complete snapshot for backing up and restoring (Settings &rarr; Backup &amp; Restore &rarr; Export Backup).</li>
+            <li><strong>CSV export</strong> — spreadsheet-friendly files for doses, inventory, symptoms, weight, and protocols, bundled as a single export you can open in Numbers or Excel.</li>
+          </ul>
+          <p>Both options use the standard iOS share sheet so you can save to Files, iCloud Drive, or email.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I delete my account or data?</summary>
+        <div class="answer">
+          <p>Peptide Pilot has <strong>no account</strong> — your information never leaves your device, so there is no account to delete. To remove your data:</p>
+          <ul>
+            <li><strong>Delete everything:</strong> Use the data-reset option in <strong>Settings</strong>, or simply delete the app from your iPhone. Removing the app erases all locally stored data permanently.</li>
+            <li><strong>Delete a single item:</strong> Swipe left on any vial, dose, or log entry and tap <strong>Delete</strong>.</li>
+          </ul>
+          <p>Deletion is permanent and cannot be undone unless you have an exported backup, so consider exporting your data first.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="troubleshooting">
+      <h2>Troubleshooting</h2>
+      <div class="card">
+        <ul class="feature-list">
+          <li>Force-quit and reopen the app: swipe up from the bottom of the screen and swipe the app away.</li>
+          <li>Make sure you're running the latest version of Peptide Pilot from the App Store.</li>
+          <li>Restart your iPhone if the app is slow or unresponsive.</li>
+          <li>If reminders aren't appearing, check <strong>Settings &rarr; Notifications &rarr; Peptide Pilot</strong> and confirm notifications are allowed.</li>
+          <li>If a calculation looks off, double-check the vial's total amount (mg) and the water volume (mL) you entered.</li>
+          <li>If the problem persists, export a backup, then reinstall the app and restore from that backup.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="bugs">
+      <h2>Reporting a Bug</h2>
+      <p>Found something not working as expected? Email us at
+        <a href="mailto:peptidepilot@gmail.com?subject=Peptide%20Pilot%20Bug%20Report">peptidepilot@gmail.com</a>
+        with:</p>
+      <ul class="feature-list">
+        <li>A description of what happened and what you expected to happen</li>
+        <li>The steps to reproduce the issue</li>
+        <li>Your iPhone model and iOS version</li>
+        <li>A screenshot, if possible</li>
+      </ul>
+      <p class="muted">We review every report we receive.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Peptide Pilot. All rights reserved.<br />
+      Support: <a href="mailto:peptidepilot@gmail.com">peptidepilot@gmail.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
